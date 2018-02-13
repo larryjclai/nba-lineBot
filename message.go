@@ -137,9 +137,9 @@ func (app *NBABotClient) handleText(message *linebot.TextMessage, replyToken str
 		imageURL := app.appBaseURL + "/static/buttons/nba.jpg"
 		buttons := linebot.NewButtonsTemplate(
 			imageURL, "NBA功能列表", "賽事",
-			linebot.NewMessageTemplateAction("今日賽事", CmdTodayGame),
-			linebot.NewMessageTemplateAction("明日賽事", CmdTomorrowGame),
-			linebot.NewMessageTemplateAction("昨日賽事", CmdYesterdayGame),
+			linebot.NewMessageTemplateAction("QQ今日賽事", CmdTodayGame),
+			linebot.NewMessageTemplateAction("QQ明日賽事", CmdTomorrowGame),
+			linebot.NewMessageTemplateAction("QQ昨日賽事", CmdYesterdayGame),
 		)
 		cmdLine := strings.Join(CmdArray, " | ")
 		if _, err := app.bot.ReplyMessage(
